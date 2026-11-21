@@ -3,7 +3,7 @@
 > **Brand Identity:** ITZ SOFTWARE DEVOPS  
 > **Headline:** Software Engineer | Full-Stack Developer | Blockchain Engineer | Smart Contract Developer  
 > **Location:** Nigeria  
-> **Canonical Domain:** [`https://abdulganiyyu.dev`](https://abdulganiyyu.dev)  
+> **Canonical Domain:** [`https://abdulganiyyu.vercel.app`](https://abdulganiyyu.vercel.app)  
 > **Primary Contact:** [agmuhammadmustapha@gmail.com](mailto:agmuhammadmustapha@gmail.com)  
 
 ---
