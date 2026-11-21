@@ -54,8 +54,8 @@ My engineering philosophy revolves around determinism, verifiable state, securit
     linkedin: null, // Configured to null until verified profile is provided
   },
   domain: {
-    current: "https://personal-portfolio-itzsoftwaredevops.vercel.app",
-    recommended: ["abdulganiyyu.com", "abdulganiyyu.dev", "itzsoftwaredevops.dev"],
+    current: "https://abdulganiyyu.dev",
+    recommended: ["abdulganiyyu.dev", "abdulganiyyu.com", "itzsoftwaredevops.dev"],
   },
   seo: {
     titleTemplate: "%s | Abdulganiyyu Mustapha Muhammad (Itz Software DevOps)",
