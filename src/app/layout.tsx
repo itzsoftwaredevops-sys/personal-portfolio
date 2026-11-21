@@ -72,6 +72,9 @@ export const metadata: Metadata = {
       "application/rss+xml": "/feed.xml",
     },
   },
+  verification: {
+    google: "google946b50a9381c0964",
+  },
 };
 
 export default function RootLayout({
