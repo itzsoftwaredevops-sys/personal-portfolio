@@ -61,20 +61,20 @@ export const experiences: ExperienceItem[] = [
   {
     id: "stellar-open-source",
     type: "Open Source",
-    title: "Open-Source Contributor (Drips Stellar Wave 10)",
+    title: "Open-Source Contributor (Drips Stellar Waves 9, 10 & 11)",
     organization: "Stellar Blockchain Developer Community",
-    period: "Wave 10",
+    period: "Waves 9, 10 & 11",
     location: "Global / Distributed",
     description:
-      "Selected as an open-source contributor during Drips Stellar Wave 10, achieving a 100% completion rate by resolving 45 out of 45 assigned issues across eight distinct community repositories in seven days.",
+      "Active open-source contributor across Drips Stellar Waves 9, 10, and 11, achieving a 100% completion rate by resolving 105 out of 105 assigned issues (20/20 in Wave 9, 45/45 in Wave 10, 40/40 in Wave 11) and earning 21,800 all-time points across 18+ community repositories.",
     bulletPoints: [
-      "Resolved 45 assigned issues across frontends, backends, smart contract interfaces, and CI/CD automation pipelines.",
+      "Resolved 105 assigned issues across three consecutive 7-day sprints (Wave 9: 20/20, 3,600 pts; Wave 10: 45/45, 7,650 pts; Wave 11: 40/40, 10,550 pts).",
+      "Contributed across frontends, backends, Soroban/smart contract interfaces, escrow systems, and CI/CD automation pipelines.",
       "Hardened failing GitHub Actions workflows, resolved package dependency discrepancies, and configured automated test runs.",
-      "Repaired UI rendering defects, state synchronization errors, and API integration flaws across community DApps.",
-      "Adhered to strict maintainer review standards with reproducible tests and atomic, well-documented pull requests.",
+      "Adhered to strict maintainer review standards with reproducible tests and atomic, well-documented pull requests across 18+ ecosystem repositories.",
     ],
-    technologies: ["TypeScript", "React", "Node.js", "GitHub Actions", "CI/CD", "Stellar SDK", "Soroban"],
-    verifiedReference: "Drips Stellar Wave 10",
+    technologies: ["TypeScript", "React", "Node.js", "Rust", "Soroban", "GitHub Actions", "CI/CD", "Stellar SDK"],
+    verifiedReference: "Drips Stellar Waves 9, 10 & 11",
   },
   {
     id: "byzantine-nexus",
