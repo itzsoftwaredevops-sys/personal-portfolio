@@ -59,12 +59,21 @@ export const metadata: Metadata = {
     title: siteConfig.seo.defaultTitle,
     description: siteConfig.seo.defaultDescription,
     siteName: `${siteConfig.name} (${siteConfig.brand})`,
+    images: [
+      {
+        url: "/images/brand/software-devops-logo.jpg",
+        width: 1024,
+        height: 1024,
+        alt: `${siteConfig.name} — ${siteConfig.brand}`,
+      },
+    ],
   },
   twitter: {
     card: "summary_large_image",
     title: siteConfig.seo.defaultTitle,
     description: siteConfig.seo.defaultDescription,
     creator: "@AbdulganiyyuMM",
+    images: ["/images/brand/software-devops-logo.jpg"],
   },
   alternates: {
     canonical: siteConfig.domain.current,

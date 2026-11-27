@@ -1,5 +1,6 @@
 import React from "react";
 import Link from "next/link";
+import Image from "next/image";
 import { ArrowUpRight, ExternalLink, ShieldCheck } from "lucide-react";
 import { Github } from "@/components/ui/Icons";
 import { Project } from "@/data/projects";
@@ -18,6 +19,23 @@ export function ProjectCard({ project, featuredLayout = false }: ProjectCardProp
       }`}
     >
       <div>
+        {/* Project Visual Cover Banner (when available) */}
+        {project.image && (
+          <Link
+            href={`/projects/${project.slug}`}
+            className="block relative h-48 sm:h-52 w-full overflow-hidden rounded-lg mb-5 border border-white/[0.08] bg-[#080B12]"
+          >
+            <Image
+              src={project.image}
+              alt={`${project.name} visual preview`}
+              fill
+              sizes="(max-width: 768px) 100vw, 50vw"
+              className="object-cover object-top transition-transform duration-500 group-hover:scale-105"
+            />
+            <div className="absolute inset-0 bg-gradient-to-t from-[#141B2B]/80 via-transparent to-transparent" />
+          </Link>
+        )}
+
         {/* Top Header: Category & Status */}
         <div className="flex flex-wrap items-center justify-between gap-2.5 mb-4">
           <div className="flex flex-wrap items-center gap-2">
@@ -39,19 +57,37 @@ export function ProjectCard({ project, featuredLayout = false }: ProjectCardProp
           </Badge>
         </div>
 
-        {/* Project Title & Tagline */}
-        <h3 className="text-xl sm:text-2xl font-bold text-[#F5F7FA] font-[family-name:var(--font-space-grotesk)] group-hover:text-cyan-400 transition-colors duration-200">
-          <Link href={`/projects/${project.slug}`} className="focus:outline-none focus:underline flex items-center gap-1.5">
-            {project.name}
-            <ArrowUpRight className="w-5 h-5 opacity-0 group-hover:opacity-100 group-hover:translate-x-0.5 group-hover:-translate-y-0.5 transition-all text-cyan-400" />
-          </Link>
-        </h3>
-        
-        {project.tagline && (
-          <p className="mt-1 text-sm font-medium text-blue-400/90 font-mono">
-            {project.tagline}
-          </p>
-        )}
+        {/* Project Title & Logo */}
+        <div className="flex items-center gap-3">
+          {project.logo && (
+            <div
+              className={`relative h-10 w-10 shrink-0 overflow-hidden rounded-lg border border-white/[0.12] ${
+                project.logoLightBg ? "bg-white p-0.5" : "bg-[#080B12]"
+              }`}
+            >
+              <Image
+                src={project.logo}
+                alt={`${project.name} logo`}
+                fill
+                sizes="40px"
+                className="object-contain"
+              />
+            </div>
+          )}
+          <div>
+            <h3 className="text-xl sm:text-2xl font-bold text-[#F5F7FA] font-[family-name:var(--font-space-grotesk)] group-hover:text-cyan-400 transition-colors duration-200">
+              <Link href={`/projects/${project.slug}`} className="focus:outline-none focus:underline flex items-center gap-1.5">
+                {project.name}
+                <ArrowUpRight className="w-5 h-5 opacity-0 group-hover:opacity-100 group-hover:translate-x-0.5 group-hover:-translate-y-0.5 transition-all text-cyan-400" />
+              </Link>
+            </h3>
+            {project.tagline && (
+              <p className="mt-0.5 text-xs sm:text-sm font-medium text-blue-400/90 font-mono">
+                {project.tagline}
+              </p>
+            )}
+          </div>
+        </div>
 
         {/* Summary */}
         <p className="mt-3.5 text-sm sm:text-base text-[#9CA8BA] leading-relaxed">

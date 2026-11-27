@@ -1,5 +1,6 @@
 import React from "react";
 import Link from "next/link";
+import Image from "next/image";
 import {
   ArrowRight,
   ArrowUpRight,
@@ -130,12 +131,15 @@ export default function HomePage() {
               <div className="relative rounded-2xl border border-white/[0.1] bg-[#101522]/90 p-6 sm:p-7 shadow-2xl backdrop-blur-md">
                 {/* Visual Avatar / Identity Badge */}
                 <div className="flex items-center gap-4 pb-6 border-b border-white/[0.08]">
-                  <div className="relative flex h-16 w-16 items-center justify-center rounded-2xl bg-gradient-to-tr from-blue-600 via-indigo-600 to-cyan-400 p-0.5 shadow-lg shadow-blue-500/20">
-                    <div className="flex h-full w-full items-center justify-center rounded-[14px] bg-[#0A0E18]">
-                      <span className="font-mono text-xl font-extrabold bg-gradient-to-br from-white to-gray-400 bg-clip-text text-transparent">
-                        AMM
-                      </span>
-                    </div>
+                  <div className="relative h-16 w-16 shrink-0 overflow-hidden rounded-2xl border border-amber-400/40 bg-[#080B12] shadow-lg shadow-amber-500/15">
+                    <Image
+                      src="/images/brand/software-devops-logo.jpg"
+                      alt="Itz Software DevOps — Abdulganiyyu Mustapha Muhammad"
+                      fill
+                      sizes="64px"
+                      className="object-cover"
+                      priority
+                    />
                   </div>
                   <div>
                     <h2 className="text-base font-bold text-[#F5F7FA]">
@@ -286,11 +290,10 @@ export default function HomePage() {
                     {cat.skills.map((skill) => (
                       <span
                         key={skill.name}
-                        className={`text-xs font-mono px-2.5 py-1 rounded border ${
-                          skill.highlight
-                            ? "bg-blue-500/10 text-cyan-300 border-blue-500/30"
-                            : "bg-white/[0.03] text-gray-300 border-white/[0.06]"
-                        }`}
+                        className={`text-xs font-mono px-2.5 py-1 rounded border ${skill.highlight
+                          ? "bg-blue-500/10 text-cyan-300 border-blue-500/30"
+                          : "bg-white/[0.03] text-gray-300 border-white/[0.06]"
+                          }`}
                       >
                         {skill.name}
                       </span>

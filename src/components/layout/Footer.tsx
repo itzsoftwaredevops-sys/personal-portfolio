@@ -1,6 +1,7 @@
 import React from "react";
 import Link from "next/link";
-import { Mail, Send, MessageSquare, Terminal } from "lucide-react";
+import Image from "next/image";
+import { Mail, Send, MessageSquare } from "lucide-react";
 import { Github } from "@/components/ui/Icons";
 import { siteConfig } from "@/data/siteConfig";
 import { ScrollToTop } from "@/components/ui/ScrollToTop";
@@ -14,8 +15,14 @@ export function Footer() {
           {/* Identity column */}
           <div className="md:col-span-2 space-y-4">
             <div className="flex items-center gap-2.5">
-              <div className="flex h-8 w-8 items-center justify-center rounded-lg bg-gradient-to-br from-blue-600 to-cyan-500 text-white">
-                <Terminal className="h-4 w-4" />
+              <div className="relative h-8 w-8 overflow-hidden rounded-lg border border-amber-400/30 bg-[#080B12]">
+                <Image
+                  src="/images/brand/software-devops-logo.jpg"
+                  alt="Itz Software DevOps Logo"
+                  fill
+                  sizes="32px"
+                  className="object-cover"
+                />
               </div>
               <span className="font-mono text-sm font-bold tracking-tight text-[#F5F7FA]">
                 {siteConfig.name}

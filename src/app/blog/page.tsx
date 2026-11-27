@@ -1,6 +1,7 @@
 import React from "react";
 import type { Metadata } from "next";
 import Link from "next/link";
+import Image from "next/image";
 import { Calendar, Clock, ArrowRight } from "lucide-react";
 import { siteConfig } from "@/data/siteConfig";
 import { blogPosts } from "@/data/blog";
@@ -34,6 +35,22 @@ export default function BlogPage() {
         {blogPosts.length > 0 && (
           <div className="mb-12">
             <article className="group relative rounded-2xl border border-white/[0.08] bg-gradient-to-b from-[#141B2B] to-[#101522] p-6 sm:p-10 backdrop-blur-sm hover:border-cyan-500/40 transition-all duration-300">
+              {blogPosts[0].coverImage && (
+                <Link
+                  href={`/blog/${blogPosts[0].slug}`}
+                  className="block relative h-52 sm:h-64 w-full overflow-hidden rounded-xl mb-6 border border-white/[0.08] bg-[#080B12]"
+                >
+                  <Image
+                    src={blogPosts[0].coverImage}
+                    alt={blogPosts[0].title}
+                    fill
+                    sizes="(max-width: 1024px) 100vw, 960px"
+                    className="object-cover transition-transform duration-500 group-hover:scale-105"
+                    priority
+                  />
+                  <div className="absolute inset-0 bg-gradient-to-t from-[#141B2B]/80 via-transparent to-transparent" />
+                </Link>
+              )}
               <div className="flex flex-wrap items-center gap-2 mb-4">
                 <Badge variant="cyan">{blogPosts[0].category}</Badge>
                 <span className="text-xs font-mono text-emerald-400 font-semibold">

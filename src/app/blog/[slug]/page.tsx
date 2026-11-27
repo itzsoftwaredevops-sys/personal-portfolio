@@ -2,13 +2,13 @@ import React from "react";
 import type { Metadata } from "next";
 import { notFound } from "next/navigation";
 import Link from "next/link";
+import Image from "next/image";
 import {
   ArrowLeft,
   Calendar,
   Clock,
   BookOpen,
   ArrowRight,
-  Terminal,
 } from "lucide-react";
 import { blogPosts } from "@/data/blog";
 import { siteConfig } from "@/data/siteConfig";
@@ -115,8 +115,14 @@ export default async function BlogPostPage({ params }: Props) {
           {/* Author & Meta bar */}
           <div className="mt-6 flex flex-wrap items-center justify-between gap-4 pt-6 border-t border-white/[0.06] text-xs font-mono text-[#9CA8BA]">
             <div className="flex items-center gap-3">
-              <div className="flex h-9 w-9 items-center justify-center rounded-lg bg-blue-600/20 text-cyan-400 border border-blue-500/30">
-                <Terminal className="h-4 w-4" />
+              <div className="relative h-9 w-9 overflow-hidden rounded-lg border border-amber-400/30 bg-[#080B12]">
+                <Image
+                  src="/images/brand/software-devops-logo.jpg"
+                  alt={post.author.brand}
+                  fill
+                  sizes="36px"
+                  className="object-cover"
+                />
               </div>
               <div>
                 <span className="text-[#F5F7FA] font-bold block">
@@ -135,6 +141,19 @@ export default async function BlogPostPage({ params }: Props) {
               </span>
             </div>
           </div>
+
+          {post.coverImage && (
+            <div className="mt-8 relative h-60 sm:h-80 w-full overflow-hidden rounded-2xl border border-white/[0.1] bg-[#080B12]">
+              <Image
+                src={post.coverImage}
+                alt={post.title}
+                fill
+                sizes="(max-width: 1024px) 100vw, 896px"
+                className="object-cover"
+                priority
+              />
+            </div>
+          )}
         </header>
 
         {/* Table of Contents */}

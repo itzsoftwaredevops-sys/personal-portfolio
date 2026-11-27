@@ -7,6 +7,9 @@ export interface Project {
   status: "Live & Deployed" | "Completed Protocol" | "Active Research" | "Open Source Contributions";
   summary: string;
   featured: boolean;
+  image?: string;
+  logo?: string;
+  logoLightBg?: boolean;
   liveUrl?: string;
   githubUrl?: string;
   repoLinks?: { label: string; url: string }[];
@@ -34,6 +37,8 @@ export const projects: Project[] = [
     summary:
       "A decentralized academic credential verification network that guarantees certificate authenticity through canonical JSON hashing, SHA-256 proofs, and smart contracts deployed on Ethereum Sepolia.",
     featured: true,
+    image: "/images/projects/vericred-banner.jpg",
+    logo: "/images/projects/vericred-icon.jpg",
     liveUrl: "https://vericred.web.app/",
     technologies: [
       "Solidity",
@@ -189,6 +194,9 @@ export const projects: Project[] = [
     summary:
       "A high-performance decentralized application designed for real-time blockchain mining metrics, telemetry tracking, and Web3 wallet interactions. Awarded Top 4 placement in Wave 3 competition.",
     featured: true,
+    image: "/images/projects/dagpulse-hero.jpg",
+    logo: "/images/projects/dagpulse-logo.jpg",
+    logoLightBg: true,
     technologies: ["React", "TypeScript", "Ethers.js / Web3", "Tailwind CSS", "REST APIs", "WebSocket"],
     metrics: [
       { label: "Competition Placement", value: "Top 4 (Wave 3)" },
@@ -233,6 +241,9 @@ export const projects: Project[] = [
     summary:
       "A protocol development project focused on decentralized intent-based systems and protocol architecture on BlockDAG. Ranked on Wave 1 leaderboard with an official score of 74.0/100 (position 13th to 14th).",
     featured: true,
+    image: "/images/projects/intentx-hero.jpg",
+    logo: "/images/projects/intentx-logo.jpg",
+    logoLightBg: true,
     technologies: ["Solidity", "Smart Contracts", "Protocol Design", "Intent Architecture", "Web3"],
     metrics: [
       { label: "Leaderboard Score", value: "74.0 / 100" },

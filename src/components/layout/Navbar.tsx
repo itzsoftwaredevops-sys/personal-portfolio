@@ -2,8 +2,9 @@
 
 import React, { useState } from "react";
 import Link from "next/link";
+import Image from "next/image";
 import { usePathname } from "next/navigation";
-import { Menu, X, ArrowUpRight, Terminal } from "lucide-react";
+import { Menu, X, ArrowUpRight } from "lucide-react";
 import { siteConfig } from "@/data/siteConfig";
 
 export function Navbar() {
@@ -23,8 +24,15 @@ export function Navbar() {
           href="/"
           className="flex items-center gap-2.5 group focus:outline-none focus:ring-2 focus:ring-cyan-500 rounded-lg p-1"
         >
-          <div className="flex h-9 w-9 items-center justify-center rounded-lg bg-gradient-to-br from-blue-600 to-cyan-500 text-white shadow-md shadow-blue-500/20 group-hover:shadow-cyan-500/30 transition-all">
-            <Terminal className="h-5 w-5" />
+          <div className="relative h-9 w-9 overflow-hidden rounded-lg border border-amber-400/30 bg-[#080B12] shadow-md shadow-amber-500/10 group-hover:border-cyan-400/50 transition-all">
+            <Image
+              src="/images/brand/software-devops-logo.jpg"
+              alt="Itz Software DevOps Logo"
+              fill
+              sizes="36px"
+              className="object-cover"
+              priority
+            />
           </div>
           <div className="flex flex-col">
             <span className="font-mono text-sm font-bold tracking-tight text-[#F5F7FA] group-hover:text-cyan-400 transition-colors">

@@ -11,6 +11,7 @@ export interface BlogPost {
   category: "Blockchain and Web3" | "Solidity and Smart Contracts" | "Full-Stack Development" | "Open Source" | "Software Engineering" | "Developer Productivity";
   publishedAt: string;
   readingTime: string;
+  coverImage?: string;
   author: {
     name: string;
     role: string;
@@ -31,6 +32,7 @@ export const blogPosts: BlogPost[] = [
     category: "Blockchain and Web3",
     publishedAt: "2026-10-15",
     readingTime: "7 min read",
+    coverImage: "/images/projects/vericred-banner.jpg",
     author: {
       name: "Abdulganiyyu Mustapha Muhammad",
       role: "Software Engineer & Blockchain Developer",

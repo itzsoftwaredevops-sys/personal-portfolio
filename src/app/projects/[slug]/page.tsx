@@ -2,6 +2,7 @@ import React from "react";
 import type { Metadata } from "next";
 import { notFound } from "next/navigation";
 import Link from "next/link";
+import Image from "next/image";
 import {
   ArrowLeft,
   ArrowUpRight,
@@ -96,14 +97,48 @@ export default async function ProjectDetailPage({ params }: Props) {
             </Badge>
           </div>
 
-          <h1 className="text-3xl sm:text-5xl font-extrabold text-[#F5F7FA] font-[family-name:var(--font-space-grotesk)] tracking-tight">
-            {project.name}
-          </h1>
+          <div className="flex items-center gap-4">
+            {project.logo && (
+              <div
+                className={`relative h-14 w-14 sm:h-16 sm:w-16 shrink-0 overflow-hidden rounded-xl border border-white/[0.12] ${
+                  project.logoLightBg ? "bg-white p-1" : "bg-[#080B12]"
+                }`}
+              >
+                <Image
+                  src={project.logo}
+                  alt={`${project.name} logo`}
+                  fill
+                  sizes="64px"
+                  className="object-contain"
+                  priority
+                />
+              </div>
+            )}
+            <div>
+              <h1 className="text-3xl sm:text-5xl font-extrabold text-[#F5F7FA] font-[family-name:var(--font-space-grotesk)] tracking-tight">
+                {project.name}
+              </h1>
 
-          {project.tagline && (
-            <p className="mt-2 text-base sm:text-lg font-mono text-cyan-400">
-              {project.tagline}
-            </p>
+              {project.tagline && (
+                <p className="mt-1.5 text-base sm:text-lg font-mono text-cyan-400">
+                  {project.tagline}
+                </p>
+              )}
+            </div>
+          </div>
+
+          {project.image && (
+            <div className="mt-8 relative h-64 sm:h-80 md:h-96 w-full overflow-hidden rounded-2xl border border-white/[0.1] bg-[#080B12] shadow-2xl">
+              <Image
+                src={project.image}
+                alt={`${project.name} showcase banner`}
+                fill
+                sizes="(max-width: 1024px) 100vw, 1024px"
+                className="object-cover object-top"
+                priority
+              />
+              <div className="absolute inset-0 bg-gradient-to-t from-[#080B12]/70 via-transparent to-transparent" />
+            </div>
           )}
 
           <p className="mt-4 text-base sm:text-lg text-[#9CA8BA] leading-relaxed max-w-3xl">
