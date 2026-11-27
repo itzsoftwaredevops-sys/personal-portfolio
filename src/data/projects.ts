@@ -150,17 +150,27 @@ export const projects: Project[] = [
       { label: "ToluLabs/StellarCred", url: "https://github.com/ToluLabs/StellarCred" },
       { label: "Divinity-Labs/Lens", url: "https://github.com/Divinity-Labs/Lens" },
       { label: "Obiajulu-gif/Prompt-Hash-Stellar", url: "https://github.com/Obiajulu-gif/Prompt-Hash-Stellar" },
+      { label: "salazarsebas/Cougr", url: "https://github.com/salazarsebas/Cougr/" },
+      { label: "TevaLabs/Xelma-Blockchain", url: "https://github.com/TevaLabs/Xelma-Blockchain/" },
+      { label: "Stellopay/stellopay-frontend", url: "https://github.com/Stellopay/stellopay-frontend" },
+      { label: "accesslayerorg/accesslayer-contracts", url: "https://github.com/accesslayerorg/accesslayer-contracts" },
+      { label: "ssupportme/support-me", url: "https://github.com/ssupportme/support-me" },
+      { label: "Neurowealth/NeuroWealth-Smartcontract", url: "https://github.com/Neurowealth/NeuroWealth-Smartcontract" },
+      { label: "Heliobond/backend", url: "https://github.com/Heliobond/backend" },
+      { label: "DocForum/docforum-escrow", url: "https://github.com/DocForum/docforum-escrow" },
+      { label: "naninu123/4evergent", url: "https://github.com/naninu123/4evergent" },
+      { label: "Savitura/Savitools", url: "https://github.com/Savitura/Savitools" },
     ],
     disclaimer:
-      "All pull requests and issue resolutions were completed as assigned open-source contributions in community repositories during Drips Stellar Wave 10.",
+      "All pull requests and issue resolutions were completed as assigned open-source contributions across community repositories during Drips Stellar Waves 9, 10, and 11.",
     architectureDetails: {
       problemStatement:
         "Ecosystem projects across the Stellar blockchain network faced critical backlog bottlenecks ranging from UI rendering bugs and state race conditions to missing automated test pipelines and broken CI/CD integration scripts.",
       architectureOverview:
-        "Tackled diverse codebases in parallel across 8+ community repositories. Prioritized rapid root-cause diagnosis, reproducible test case generation, minimal scoped fixes, and clean PR documentation satisfying maintainer standards.",
+        "Tackled diverse codebases in parallel across 18+ community repositories. Prioritized rapid root-cause diagnosis, reproducible test case generation, minimal scoped fixes, and clean PR documentation satisfying maintainer standards.",
       keyFeatures: [
-        "100% resolution rate: 45 out of 45 assigned issues addressed and verified within the 7-day challenge window.",
-        "Full-stack breadth: Fixed frontend hydration bugs, backend REST validation flaws, and contract interaction serialization.",
+        "100% resolution rate across three consecutive sprints: 20/20 (Wave 9), 45/45 (Wave 10), and 40/40 (Wave 11) for 105 total issues resolved.",
+        "Full-stack breadth: Fixed frontend hydration bugs, backend REST validation flaws, and smart contract interaction serialization.",
         "CI/CD Workflow Hardening: Restored failing GitHub Actions pipelines, dependency cache configuration, and automated test runners.",
         "Cross-team communication: Collaborated transparently with community maintainers following strict contribution guidelines.",
       ],
@@ -179,7 +189,7 @@ export const projects: Project[] = [
       engineeringChallenges: [
         {
           challenge:
-            "Navigating disparate code conventions, dependency mismatches, and undocumented project architectures across 8+ different repositories in a tight 7-day window.",
+            "Navigating disparate code conventions, dependency mismatches, and undocumented project architectures across 18+ different repositories in tight 7-day sprint windows.",
           solution:
             "Structured an internal intake pipeline: inspecting git log, reviewing package locks, reproducing issues in isolated branches, and running targeted test suites before submission.",
         },

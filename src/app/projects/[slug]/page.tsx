@@ -191,7 +191,7 @@ export default async function ProjectDetailPage({ params }: Props) {
             <div className="mt-6 p-4 rounded-xl bg-[#0E1422] border border-white/[0.08]">
               <h4 className="text-xs font-mono uppercase tracking-wider text-cyan-400 mb-3 flex items-center gap-2">
                 <Github className="h-3.5 w-3.5" />
-                <span>Verified Contribution Repositories (Drips Stellar Wave 10)</span>
+                <span>Verified Contribution Repositories (Drips Stellar Waves 9, 10 &amp; 11)</span>
               </h4>
               <div className="grid grid-cols-1 sm:grid-cols-2 gap-2">
                 {project.repoLinks.map((repo, idx) => (
