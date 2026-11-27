@@ -107,7 +107,7 @@ export default function AchievementsPage() {
                         alt={`${ach.context} logo`}
                         fill
                         sizes="36px"
-                        className="object-contain p-0.5"
+                        className={ach.logoLightBg ? "object-contain p-0.5" : "object-cover"}
                       />
                     </div>
                   )}

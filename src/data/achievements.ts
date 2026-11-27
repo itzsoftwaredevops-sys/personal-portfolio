@@ -34,8 +34,8 @@ export const achievements: Achievement[] = [
     dateOrWave: "Stellar Wave 11",
     pointsEarned: "10,550 pts",
     rewardGrant: "TBD",
-    logo: "/images/projects/stellar-wave-logo.png",
-    logoLightBg: true,
+    logo: "/images/projects/drips-waves.jpg",
+    logoLightBg: false,
     description:
       "Maintained a 100% completion rate in Drips Stellar Wave 11 by resolving all 40 assigned issues within seven days, earning 10,550 points in the wave.",
     verificationDetails:
@@ -52,8 +52,8 @@ export const achievements: Achievement[] = [
     dateOrWave: "Stellar Wave 10",
     pointsEarned: "7,650 pts",
     rewardGrant: "$28",
-    logo: "/images/projects/stellar-wave-logo.png",
-    logoLightBg: true,
+    logo: "/images/projects/drips-waves.jpg",
+    logoLightBg: false,
     description:
       "Achieved a 100% resolution rate by diagnosing, fixing, testing, and successfully submitting pull requests for all 45 assigned issues across eight distinct Stellar ecosystem repositories within seven days, earning 7,650 points and a $28 reward grant.",
     verificationDetails:
@@ -70,8 +70,8 @@ export const achievements: Achievement[] = [
     dateOrWave: "Stellar Wave 9",
     pointsEarned: "3,600 pts",
     rewardGrant: "$18",
-    logo: "/images/projects/stellar-wave-logo.png",
-    logoLightBg: true,
+    logo: "/images/projects/drips-waves.jpg",
+    logoLightBg: false,
     description:
       "Resolved 20 out of 20 assigned open-source issues in seven days during Drips Stellar Wave 9, earning 3,600 points and a $18 reward grant.",
     verificationDetails:

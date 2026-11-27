@@ -123,6 +123,7 @@ export const projects: Project[] = [
     summary:
       "High-velocity open-source engineering across Drips Stellar Waves 9, 10, and 11, resolving 105 out of 105 assigned issues (20/20 in Wave 9, 45/45 in Wave 10, 40/40 in Wave 11) and earning 21,800 all-time points across smart contracts, frontends, backends, and CI/CD.",
     featured: true,
+    image: "/images/projects/drips-waves.jpg",
     logo: "/images/projects/stellar-wave-logo.png",
     logoLightBg: true,
     technologies: [
