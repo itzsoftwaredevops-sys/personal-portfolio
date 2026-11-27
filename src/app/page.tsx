@@ -17,7 +17,7 @@ import { Github } from "@/components/ui/Icons";
 import { siteConfig } from "@/data/siteConfig";
 import { projects } from "@/data/projects";
 import { skillCategories } from "@/data/skills";
-import { achievements } from "@/data/achievements";
+import { achievements, stellarWaveSummary } from "@/data/achievements";
 import { ProjectCard } from "@/components/ui/ProjectCard";
 import { SectionHeading } from "@/components/ui/SectionHeading";
 import { Badge } from "@/components/ui/Badge";
@@ -184,7 +184,7 @@ export default function HomePage() {
                     <Sparkles className="h-4 w-4 text-emerald-400 shrink-0 mt-0.5" />
                     <div>
                       <span className="text-gray-400">Open Source: </span>
-                      <span className="text-gray-200">45/45 Issues Resolved (Drips Stellar Wave 10)</span>
+                      <span className="text-gray-200">21,800 pts • 105/105 Issues (Stellar Waves 9–11)</span>
                     </div>
                   </div>
                 </div>
@@ -211,28 +211,78 @@ export default function HomePage() {
       <section className="py-12 border-b border-white/[0.06] bg-[#0B0F19]/60">
         <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
           <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
-            {achievements.map((ach) => (
-              <div
-                key={ach.id}
-                className="rounded-xl border border-white/[0.08] bg-[#141B2B]/60 p-5 hover:border-cyan-500/30 transition-all"
-              >
-                <div className="flex items-center justify-between mb-2">
-                  <Badge variant="cyan">{ach.dateOrWave}</Badge>
-                  <span className="text-xs font-mono text-emerald-400 font-semibold">
-                    {ach.badge}
-                  </span>
+            {/* Stellar Cumulative Card */}
+            <Link
+              href="/achievements"
+              className="group rounded-xl border border-white/[0.08] bg-[#141B2B]/60 p-5 hover:border-cyan-500/30 transition-all"
+            >
+              <div className="flex items-center justify-between mb-3">
+                <div className="flex items-center gap-2">
+                  <div className="relative h-7 w-7 overflow-hidden rounded-md bg-white p-1">
+                    <Image
+                      src={stellarWaveSummary.logo}
+                      alt="Stellar Drips Wave"
+                      fill
+                      sizes="28px"
+                      className="object-contain p-0.5"
+                    />
+                  </div>
+                  <Badge variant="cyan">{stellarWaveSummary.wavesCompleted}</Badge>
                 </div>
-                <h3 className="text-lg font-bold text-[#F5F7FA] font-[family-name:var(--font-space-grotesk)]">
-                  {ach.metric}
-                </h3>
-                <p className="mt-1 text-xs font-mono text-blue-400">
-                  {ach.title}
-                </p>
-                <p className="mt-2 text-xs text-[#9CA8BA] leading-relaxed">
-                  {ach.description}
-                </p>
+                <span className="text-xs font-mono text-amber-400 font-semibold">
+                  21,800 All-Time pts
+                </span>
               </div>
-            ))}
+              <h3 className="text-lg font-bold text-[#F5F7FA] font-[family-name:var(--font-space-grotesk)] group-hover:text-cyan-400 transition-colors">
+                {stellarWaveSummary.totalIssuesResolved}
+              </h3>
+              <p className="mt-1 text-xs font-mono text-blue-400">
+                Drips Stellar Wave Program (Waves 9, 10 &amp; 11)
+              </p>
+              <p className="mt-2 text-xs text-[#9CA8BA] leading-relaxed">
+                Wave 9: 20/20 (3,600 pts, $18) • Wave 10: 45/45 (7,650 pts, $28) • Wave 11: 40/40 (10,550 pts, TBD).
+              </p>
+            </Link>
+
+            {/* DAGPulse & BlockDAG IntentX Cards */}
+            {achievements
+              .filter((a) => a.id === "dagpulse-wave-3" || a.id === "blockdag-intentx-wave-1")
+              .map((ach) => (
+                <Link
+                  key={ach.id}
+                  href="/achievements"
+                  className="group rounded-xl border border-white/[0.08] bg-[#141B2B]/60 p-5 hover:border-cyan-500/30 transition-all"
+                >
+                  <div className="flex items-center justify-between mb-3">
+                    <div className="flex items-center gap-2">
+                      {ach.logo && (
+                        <div className="relative h-7 w-7 overflow-hidden rounded-md bg-white p-0.5">
+                          <Image
+                            src={ach.logo}
+                            alt={ach.context}
+                            fill
+                            sizes="28px"
+                            className="object-contain"
+                          />
+                        </div>
+                      )}
+                      <Badge variant="cyan">{ach.dateOrWave}</Badge>
+                    </div>
+                    <span className="text-xs font-mono text-emerald-400 font-semibold">
+                      {ach.badge}
+                    </span>
+                  </div>
+                  <h3 className="text-lg font-bold text-[#F5F7FA] font-[family-name:var(--font-space-grotesk)] group-hover:text-cyan-400 transition-colors">
+                    {ach.metric}
+                  </h3>
+                  <p className="mt-1 text-xs font-mono text-blue-400">
+                    {ach.title}
+                  </p>
+                  <p className="mt-2 text-xs text-[#9CA8BA] leading-relaxed">
+                    {ach.description}
+                  </p>
+                </Link>
+              ))}
           </div>
         </div>
       </section>

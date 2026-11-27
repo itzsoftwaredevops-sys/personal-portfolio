@@ -116,13 +116,15 @@ export const projects: Project[] = [
   {
     slug: "stellar-contributions",
     name: "Stellar Open-Source Contributions",
-    tagline: "45 issues resolved across 7 days in the Stellar ecosystem.",
+    tagline: "105/105 issues resolved across Waves 9, 10 & 11 (21,800 All-Time Points).",
     category: "Open Source",
     subCategory: "Stellar Blockchain Tooling & Ecosystem",
     status: "Open Source Contributions",
     summary:
-      "High-velocity open-source engineering during Drips Stellar Wave 10, resolving 45 out of 45 assigned issues in seven days across smart contracts, frontends, backends, CI/CD, and developer tooling.",
+      "High-velocity open-source engineering across Drips Stellar Waves 9, 10, and 11, resolving 105 out of 105 assigned issues (20/20 in Wave 9, 45/45 in Wave 10, 40/40 in Wave 11) and earning 21,800 all-time points across smart contracts, frontends, backends, and CI/CD.",
     featured: true,
+    logo: "/images/projects/stellar-wave-logo.png",
+    logoLightBg: true,
     technologies: [
       "Rust",
       "Soroban",
@@ -134,9 +136,9 @@ export const projects: Project[] = [
       "Stellar SDK",
     ],
     metrics: [
-      { label: "Assigned Issues", value: "45 / 45 (100%)" },
-      { label: "Execution Timeframe", value: "7 Days" },
-      { label: "Program Context", value: "Drips Stellar Wave 10" },
+      { label: "Total Issues Resolved", value: "105 / 105 (100%)" },
+      { label: "All-Time Points", value: "21,800 pts" },
+      { label: "Waves Completed", value: "Waves 9, 10 & 11" },
       { label: "Work Streams", value: "Full-Stack, Contracts & CI/CD" },
     ],
     repoLinks: [
